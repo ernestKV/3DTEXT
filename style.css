@@ -51,7 +51,7 @@ span{
     transform:rotateX(calc(var(--i)*15deg));
 }
 span:before{
-    content:'I LOVE YOU AYANA';
+    content:'I LOVE AYANA';
     position: absolute;
     width: 100%;
     height: 100px;
@@ -73,4 +73,9 @@ span:nth-child(3n+3):before{
 span:nth-child(3n+1):before{
     color: #96115e;
 
+}
+@media (max-width: 900px) {
+    .box{
+        width: 95%;
+    }
 }
