@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat:wght@700&family=Philosopher:ital@1&family=Poppins:wght@400;500;600&family=Source+Code+Pro:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #333;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    transform-style: preserve-3d;
+animation: circle 5s linear infinite;
+}
+/*@keyframes circle {*/
+/*    0%{*/
+/*        transform: rotateY(0deg);*/
+/*    }*/
+/*    100%{*/
+/*        transform: rotateY(360deg);*/
+/*    }*/
+/*}*/
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 24s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform:perspective(1000px) rotateX(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(-360deg);
+    }
+
+}
+span{
+    position: absolute;
+    inset:0;
+
+    transform:rotateX(calc(var(--i)*15deg));
+}
+span:before{
+    content:'I LOVE YOU AYANA';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+color:#fff;
+    text-transform: uppercase;
+    font-size: 8em;
+     font-weight: 800;
+    -webkit-text-stroke: 3px #000;
+    text-shadow:0 0 50px rgba(0,0,0,.5)
+}
+span:nth-child(3n+2):before{
+    color: #d33890;
+
+}
+span:nth-child(3n+3):before{
+    color: #e50e33;
+}
+span:nth-child(3n+1):before{
+    color: #96115e;
+
+}
